@@ -158,33 +158,35 @@
 		margin-bottom: .314em;
 	}
 
-	#heading{
+	.heading{
 		display: block;
 		float: left;		
 		color: #fff;
 	}
 
-	#action{
+	.action{
 		display: block;
 		float: right;		
 	}
 
-	#action>a{
+	.action>a{
 		color: #fff;
 	}
-
+	
+	/*Unit CCS*/
 	.unit_panel{
-		display: block;		
+		display: block;
+		overflow: auto;		
 		background-color: #fff;
 		margin: 0 .314em 0 .314em;
-		height: 30em;
+		/*height: 30em;*/
 	}
 
 	.unit_image{
 		display: block;
 		float: left;
-		width: 100px;
-		height: 100px;
+		width: 150px;
+		height: 150px;
 		clear: both;
 	}
 
@@ -195,8 +197,48 @@
 	}
 
 	.edit_unit{
-		
+		display: block;
+		height: 3em;
+		background-color: #3d3d3d;
+		line-height: 3em;
+		padding-left: .314em;
+		padding-right: .314em;		
+		margin-bottom: .314em;
 	}
+	/*Unit CCS*/
+	/*Tenant CSS*/
+	.tenant_panel{
+		display: block;
+		overflow: auto;		
+		background-color: #fff;
+		margin: 0 .314em 0 .314em;
+		/*height: 30em;*/
+	}
+
+	.tenant_image{
+		display: block;
+		float: left;
+		width: 150px;
+		height: 150px;
+		clear: both;
+	}
+
+	.tenant_info{
+		padding-top: .314em;
+		clear: both;
+		display: block;			
+	}
+
+	.edit_unit{
+		display: block;
+		height: 3em;
+		background-color: #3d3d3d;
+		line-height: 3em;
+		padding-left: .314em;
+		padding-right: .314em;		
+		margin-bottom: .314em;
+	}
+	/*Tenant CSS*/
 
 
 
