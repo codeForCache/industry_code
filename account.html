@@ -72,69 +72,60 @@
         </div>
         <div id="main">
             <div id="crumb">
-                <div class="heading">Units & Tenants</div>
-                <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> Add A Unit</a></div>
+                <div class="heading">Account Registration</div>
+                <!-- <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> Add A Unit</a></div> -->
             </div>
-            <!-- unit -->
-            <div class="unit_panel">
-                <div class="unit_id">
-                    <div class="id">Viewing Unit ID: 779</div>
-                    <div class="tenant_count">4: Tenants Found</div>
-                </div>
-                <div class="unit_image"><img src="" alt="unit image" width="150px" height="150px"></div>
-                <div class="unit_info">
-                    <p>Address line 1: 21 lorem street</p>
-                    <p>Address line 2: 0505; City,</p>
-                    <p>Unit Details: <span>3br/1ba</span>, <span>999 sqm</span> </p>
-                    <hr>
-                    <p>2: Tenants</p>
-                    <p>3: Active Work Orders</p>
-                </div>
-                <div class="unit_income">
-                    <hr>
-                    <p>$ Toal Receivable /month</p>
-                    <p>Lease Renewal: Nov 21, 2016</p>
-                    <p>Desired Rent: $ 800.00 /month</p>
-                </div> 
-                <div class="edit_unit">
-                    <div class="heading">Edit This Unit <i class="fa fa-pencil-square-o"></i></div>
-                    <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> Add Tenant(s)</a></div>
-                </div>               
+            <!-- register -->
+            <div class="registration">
+                <form id="registration_form" name="registration_form" method="post" action="">
+                  <fieldset>
+                    <!-- <legend>Registration</legend> -->
+                        <h3>Manager Account Registration</h3>
+                        <h4>Please fill in your details:</h4>
+                        <p>RentKing site access:</p>
+                           
+                            <input type="text" name="username" id="username" autocomplete="off" placeholder="username" />
+                             <span id="username_error"><i class="fa fa-exclamation-circle fa-fw fa-lg"></i> Incorrect input</span>
+                           
+                            <input type="password" name="password" id="password" autocomplete="off" placeholder="password" />
+                            <span id="password_error"></span>
+                            
+                            <input type="password" name="confirm_password" id="confirm_password" autocomplete="off" placeholder="confirm password" />
+                            <span id="confirm_error"></span>                             
+                  </fieldset>
+                  <fieldset>                   
+                        <p>What is your name?</p>
+                            
+                            <input type="text" name="firstname" id="firstname" autocomplete="on" placeholder="first name" />
+                            <span id="firstname_error"></span>  
+                           
+                            <input type="text" name="lastname" id="lastname" autocomplete="on" placeholder="last name" />
+                            <span id="lastname_error"></span>                          
+                  </fieldset>
+                  <fieldset>                   
+                        <p>Company Info:</p>
+                            
+                            <input type="text" name="company_name" id="company_name" autocomplete="off" placeholder="company name/dba" />
+                            <span id="company_error"></span>        
+                  </fieldset>
+                  <fieldset>                   
+                        <p>Your contact info:</p>
+                            
+                            <input type="email" name="email" id="email" autocomplete="on" placeholder="email address" />
+                            <span id="email_error"></span>
+                             
+                            <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="phone number" />
+                            <span id="phone_error"></span>                            
+                  </fieldset>
+                     <button  type="submit" class="btn">All done. Start using RentKing!</button>
+
+
+
+                </form>
             </div>
-            <!-- /unit -->
-            <!-- tenant -->
-            <div class="tenant_panel">
-                <div class="tenant_image"><img src="" alt="tenant image" width="150px" height="150px"></div>
-                <div class="tenant_info">
-                    <p>Tenant Name: Bob Smith</p>
-                    <p>Phone: 021 564 6789</p>
-                    <p>Email: blah@blah.bleh</p>                    
-                </div>
-                <div class="tenant_dues">
-                    <hr>
-                    <p>$ 280.00 - DUE</p>
-                    <p>Due On: Nov 21, 2016</p>
-                    <p>Renewal: Nov 21, 2016</p>
-                </div> 
-                <div class="tenant_control self_clear">                    
-                    <div class="list_left">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-pencil-square-o fa-fw fa-lg"></i>Edit Tenant</a></li>
-                            <li><a href="#"><i class="fa fa-usd fa-fw fa-lg"></i>Record Payment</a></li>                            
-                            <li><a href="#"><i class="fa fa-credit-card fa-fw fa-lg"></i>Add/Adjust Charges</a></li>
-                        </ul>                        
-                    </div>
-                    <div class="list_right">
-                        <ul>                            
-                            <li><a href="#"><i class="fa fa-user fa-fw fa-lg"></i>View Profile</a></li>
-                            <li><a href="#"><i class="fa fa-at fa-fw fa-lg"></i>Email/Message</a></li>
-                            <li><a href="#"><i class="fa fa-share-square fa-fw fa-lg"></i>Move Out</a></li>                         
-                            <li><a href="#"><i class="fa fa-times fa-fw fa-lg"></i>Remove Tenant</a></li>
-                        </ul>                        
-                    </div>
-                </div>               
-            </div>
-            <!-- /tenant -->
+            <!-- /register -->
+            
+            
         </div>
         <!-- footer -->
         <div class="footer">
