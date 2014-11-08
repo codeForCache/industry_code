@@ -357,11 +357,11 @@
 	/*Tenant CSS*/
 
 	/*register*/
-	.registration{
+	.registration, .account_form{
 		margin: .314em;
 		padding: .314em;
 	}
-	.registration input{
+	.registration input, .account_form input, .unit_form input{
 		display: block;
 		font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
 		width: 80%;
@@ -370,7 +370,7 @@
 		margin-bottom: .314em;		
 	}
 
-	.registration span{
+	.registration span, .account_form span, .unit_form span{
 		display: block;
 		background-color: #F8F8F5;
 		outline: 1px solid #D9534F;
@@ -382,10 +382,10 @@
 		margin-top: .314em;
 		margin-bottom: .314em;
 
-		/*display: none;*/
+		display: none;
 	}
 
-	.registration button{
+	.registration button, .account_form button, .unit_form button{
 		width: 80%;
 		height: 3.314em;
 		margin-top: .314em;
@@ -414,6 +414,22 @@
 		text-decoration: none;
 	}
 	/*/register*/
+
+	/*add unit*/
+	.unit_type{
+		display: block;
+		font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+		width: 80%;
+		height: 2em;		
+		margin-top: .314em;
+		margin-bottom: .314em;
+	}
+
+	#upload_unit_image{
+		margin-bottom: .314em;
+	}
+	
+	/*/add unit*/
 
 	/*footer*/
 	.footer{

@@ -72,53 +72,96 @@
         </div>
         <div id="main">
             <div id="crumb">
-                <div class="heading">Manage Your Account</div>
-                <!-- <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> Add A Unit</a></div> -->
+                <div class="heading">Add A Unit</div>
+                <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> Add A Unit</a></div>
             </div>
             <!-- register -->
-            <div class="account_form">
-                <form id="account_form" name="account_form" method="post" action="">
-                  <fieldset>
+            <div class="unit_form">
+                <form id="unit_form" name="unit_form" method="post" action="">
+                <fieldset>
                     <!-- <legend>Registration</legend> -->
-                        <h3>View & Manage Account Settings</h3>
-                        <h4>Please update your details below:</h4>
-                                                    
-                  </fieldset>                  
-                  <fieldset>                   
-                        <p>Account Details:</p>                            
-                            <input type="text" name="firstname" id="firstname" autocomplete="on" placeholder="first name" />
-                            <span id="firstname_error"></span>  
-                           
-                            <input type="text" name="lastname" id="lastname" autocomplete="on" placeholder="last name" />
-                            <span id="lastname_error"></span> 
+                    <h3>Adding A New Unit</h3>
+                    <h4>Please enter details to create a new unit:</h4>
+                </fieldset>                  
+                <fieldset>                   
+                    <p>Unit Address:</p>                            
+                    <input type="text" name="street" id="street" autocomplete="on" placeholder="street*" required="required"/>
+                    <span id="street_error"></span>  
 
-                            <input type="email" name="email" id="email" autocomplete="on" placeholder="email address" />
-                            <span id="email_error"></span>
-                             
-                            <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="phone number" />
-                            <span id="phone_error"></span>                         
-                  </fieldset>
-                  <fieldset>
-                      <p>RentKing site access:</p>                           
-                            <input type="text" name="username" id="username" autocomplete="off" placeholder="username" />
-                             <span id="username_error"><i class="fa fa-exclamation-circle fa-fw fa-lg"></i> Incorrect input</span>
-                           
-                            <input type="password" name="password" id="password" autocomplete="off" placeholder="password" />
-                            <span id="password_error"></span>
-                            
-                            <input type="password" name="confirm_password" id="confirm_password" autocomplete="off" placeholder="confirm password" />
-                            <span id="confirm_error"></span> 
-                  </fieldset>
-                  <fieldset>                   
-                        <p>Company Info:</p>
-                            
-                            <input type="text" name="company_name" id="company_name" autocomplete="off" placeholder="company name/dba" />
-                            <span id="company_error"></span>        
-                  </fieldset>
-                 
-                     <button  type="submit" class="btn">Save Updated Credentials!</button>
+                    <input type="text" name="apt" id="apt" autocomplete="on" placeholder="Apt./Suite./Etc." />
+                    <span id="apt_error"></span> 
 
+                    <input type="text" name="city" id="city" autocomplete="on" placeholder="city*" required="required"/>
+                    <span id="city_error"></span>
 
+                    <input type="text" name="postal" id="postal" autocomplete="on" placeholder="postal code*" required="required"/>
+                    <span id="postal_error"></span>
+
+                    <input type="text" name="extra" id="extra" autocomplete="off" placeholder="extra info" />
+                    <span id="extra_error"></span>                         
+                </fieldset>
+                <fieldset>
+                    <p>Unit Details:</p>
+                    <select name="unit_type" class="unit_type">
+                        <option value="" selected="SELECTED" required="required">~~~~ Select Type* ~~~~</option>
+                        <optgroup label="Single-family">
+                            <!-- <option value="5">Condo</option> -->
+                            <option value="11">Farm</option>
+                            <option value="14">House</option>
+                            <option value="13">Houseboat</option>
+                            <option value="12">Lot</option>
+                            <option value="10">Mobile</option>
+                            <option value="1">Single-family</option>
+                            <option value="6">Townhouse</option>
+                        </optgroup>
+                        <optgroup label="Multi-family">
+                            <option value="4">Apartment</option>
+                            <!-- <option value="7">Loft</option> -->
+                            <option value="2">Multi-family</option>
+                            <option value="8">Studio</option>
+                            <!-- <option value="9">TIC</option> -->
+                        </optgroup>
+                        <optgroup label="Commercial">
+                            <option value="3">Commercial</option>
+                            <option value="18">Industrial</option>
+                            <option value="16">Office</option>
+                            <option value="15">Retail</option>
+                            <option value="17">Warehouse</option>
+                        </optgroup>
+                    </select>
+
+                    <input type="tel" name="bed" id="bed" autocomplete="off" placeholder="bedrooms" />
+                    <span id="bed_error"></span>
+
+                    <input type="tel" name="bath" id="bath" autocomplete="off" placeholder="bathrooms" />
+                    <span id="bed_error"></span>
+
+                    <input type="tel" name="square" id="square" autocomplete="off" placeholder="square meterage m²" />
+                    <span id="square_error"></span>
+
+                    <input type="tel" name="emergency" id="emergency" autocomplete="off" placeholder="emergency contact #" />
+                    <span id="emergency_error"></span>                             
+                </fieldset>
+                <fieldset>                   
+                    <p>Property Management:</p>
+
+                    <input type="text" name="onwer" id="owner" autocomplete="off" placeholder="Unit Owner*" required="required"/>
+                    <span id="owner_error"></span>
+
+                    <input type="tel" name="desired_monthly" id="desired_monthly" autocomplete="off" placeholder="desired monthly rent $__" />
+                    <span id="desired_monthly_error"></span>         
+                </fieldset>
+
+                <fieldset>                   
+                    <p>Unit Photo:</p>
+
+                    <div class="unit_image" id="upload_unit_image"><img src="" alt="unit image" width="150px" height="150px"></div>
+
+                    <input type="file" name="unit_image" id="unit_image" autocomplete="off" placeholder="unit image" />
+                    <span id="emergency_error"></span>         
+                </fieldset>
+
+                <button  type="submit" class="btn">Add This Unit Now!</button>
 
                 </form>
             </div>
