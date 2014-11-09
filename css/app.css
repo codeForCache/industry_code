@@ -237,10 +237,7 @@
 		margin: 0 .314em 0 .314em;		
 	}
 
-	/*.unit_panel{
-		padding: .314em 0 .314em 2.314em;
-		border: 1px solid #505050;
-	}*/
+
 
 	.unit_id{
 		display: block;
@@ -373,11 +370,11 @@
 	/*Tenant CSS*/
 
 	/*register*/
-	.registration, .account_form, .unit_form{
+	.registration, .account_form, .unit_form, .reply_form, .newwo_form{
 		margin: .314em;
 		padding: .314em;
 	}
-	.registration input, .account_form input, .unit_form input{
+	.registration input, .account_form input, .unit_form input, .reply_form input, .newwo_form input{
 		display: block;
 		font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
 		width: 80%;
@@ -386,7 +383,7 @@
 		margin-bottom: .314em;		
 	}
 
-	.registration span, .account_form span, .unit_form span{
+	.registration span, .account_form span, .unit_form span, .reply_form span, .newwo_form span{
 		display: block;
 		background-color: #F8F8F5;
 		outline: 1px solid #D9534F;
@@ -401,7 +398,7 @@
 		display: none;
 	}
 
-	.registration button, .account_form button, .unit_form button{
+	.registration button, .account_form button, .unit_form button , .reply_form button, .newwo_form button{
 		width: 80%;
 		height: 3.314em;
 		margin-top: .314em;
@@ -448,11 +445,11 @@
 	/*/add unit*/
 
 	/*work orders*/
-	.work_orders{
+	.work_orders, .unit_container, .tenant_container, .reply_container{
 		border: 1px solid #505050;
 		background-color: #fff;
 		display: block;	
-		padding: .314em 0 .314em 2.314em;		
+		padding: .314em 2.314em .314em 2.314em;		
 		/*margin: .314em 0 0em 0;*/
 		font-size: 1em;		
 		text-decoration: none;
@@ -463,8 +460,8 @@
 		padding-left: 2em;
 	}
 
-	#wo_reply textarea{
-		width: 90%;
+	#wo_reply textarea, #newwo_form textarea{
+		width: 100%;
 		margin-bottom: .628em;
 	}
 
@@ -511,6 +508,24 @@
 		background-color: #848484;			
 	}
 	/*/work orders*/
+
+	/*creat new wo*/
+
+	#newwo_form select{
+		display: block;
+		font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+		width: 100%;
+		height: 2em;		
+		margin-top: .314em;
+		margin-bottom: .314em;
+
+	}
+
+	.margin_bottom{
+		margin-bottom: 2.314em;
+	}
+
+	/*/create new wo*/
 
 	/*footer*/
 	.footer{
