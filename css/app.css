@@ -93,6 +93,8 @@
 	}
 
 	#control_panel a{
+		padding: 0 0 0 2.314em;
+		margin: 0 .314em 0 .314em;
 		background-color: #fff;
 		display: block;	
 		color: #505050 !IMPORTANT;	
@@ -102,6 +104,11 @@
 		text-decoration: none;		
 		border-bottom: 1px solid #D6D6D6;
 	}
+	
+	#control_panel a:hover{
+		background-color: #848484;
+		color: #fff !IMPORTANT;
+	}	
 
 	#control_panel a:visited{
 		color: #a4a5a5;
@@ -223,13 +230,17 @@
 	}
 	
 	/*Unit CCS*/
-	.unit_panel{
+	.unit_panel, .wo_panel{
 		display: block;
 		overflow: auto;		
 		background-color: #fff;
-		margin: 0 .314em 0 .314em;
-		/*height: 30em;*/
+		margin: 0 .314em 0 .314em;		
 	}
+
+	/*.unit_panel{
+		padding: .314em 0 .314em 2.314em;
+		border: 1px solid #505050;
+	}*/
 
 	.unit_id{
 		display: block;
@@ -258,6 +269,11 @@
 		height: 150px;
 		clear: both;
 		border: 1px dotted #505050;
+	}
+
+	#unit_image{
+		display: block;
+		clear: both;
 	}
 
 	.unit_info{
@@ -357,7 +373,7 @@
 	/*Tenant CSS*/
 
 	/*register*/
-	.registration, .account_form{
+	.registration, .account_form, .unit_form{
 		margin: .314em;
 		padding: .314em;
 	}
@@ -430,6 +446,71 @@
 	}
 	
 	/*/add unit*/
+
+	/*work orders*/
+	.work_orders{
+		border: 1px solid #505050;
+		background-color: #fff;
+		display: block;	
+		padding: .314em 0 .314em 2.314em;		
+		/*margin: .314em 0 0em 0;*/
+		font-size: 1em;		
+		text-decoration: none;
+		color: #505050;		
+	}
+
+	#user_reply{
+		padding-left: 2em;
+	}
+
+	#wo_reply textarea{
+		width: 90%;
+		margin-bottom: .628em;
+	}
+
+	#wo_reply button{
+		display: block;
+		clear: both !IMPORTANT;
+	}
+
+	.pointer{
+		cursor: pointer;
+		cursor: hand;
+	}
+
+	.wo_control{
+		display: block;		
+		background-color: #3d3d3d;		
+		padding-left: .314em;
+		padding-right: .314em;		
+		margin-bottom: .314em;		
+		line-height: 2.9em;		
+		max-width: 100%;
+		overflow: hidden;
+	}	
+
+	.wo_control i{
+		margin-right: .314em;
+	}
+
+	.wo_control ul{
+		list-style: none;
+		padding: .314em 0em .314em 0em;
+		margin: 0;
+	}	
+
+	.wo_control ul li a{
+		display: block;
+	/*	height: 2.9em;	*/	
+		color: #fff;
+		padding: .314em;
+		font-size: .9em;			
+	}
+	
+	.wo_control ul li a:hover{
+		background-color: #848484;			
+	}
+	/*/work orders*/
 
 	/*footer*/
 	.footer{
