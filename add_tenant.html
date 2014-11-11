@@ -76,55 +76,73 @@
         </div>
         <div id="main">
             <div id="crumb">
-                <div class="heading"><i class="fa fa-pencil fa-fw fa-lg"></i> <span>Account Registration</span></div>
-                <!-- <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> Add A Unit</a></div> -->
+                <div class="heading"><i class="fa fa-plus-square fa-fw fa-lg"></i> <span>Add Tenant(s)</span></div>
+                <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> Add Tenant(s)</a></div>
             </div>
             <!-- register -->
-            <div class="registration">
-                <form id="registration_form" name="registration_form" method="post" action="">
-                  <fieldset>
-                    <!-- <legend>Registration</legend> -->
-                        <h3>Manager Account Registration</h3>
-                        <h4>Please fill in your details:</h4>
-                        <p>RentKing site access:</p>
-                           
-                            <input type="text" name="username" id="username" autocomplete="off" placeholder="username" />
-                             <span id="username_error"><i class="fa fa-exclamation-circle fa-fw fa-lg"></i> Incorrect input</span>
-                           
-                            <input type="password" name="password" id="password" autocomplete="off" placeholder="password" />
-                            <span id="password_error"></span>
-                            
-                            <input type="password" name="confirm_password" id="confirm_password" autocomplete="off" placeholder="confirm password" />
-                            <span id="confirm_error"></span>                             
-                  </fieldset>
-                  <fieldset>                   
-                        <p>What is your name?</p>
-                            
-                            <input type="text" name="firstname" id="firstname" autocomplete="on" placeholder="first name" />
-                            <span id="firstname_error"></span>  
-                           
-                            <input type="text" name="lastname" id="lastname" autocomplete="on" placeholder="last name" />
-                            <span id="lastname_error"></span>                          
-                  </fieldset>
-                  <fieldset>                   
-                        <p>Company Info:</p>
-                            
-                            <input type="text" name="company_name" id="company_name" autocomplete="off" placeholder="company name/dba" />
-                            <span id="company_error"></span>        
-                  </fieldset>
-                  <fieldset>                   
-                        <p>Your contact info:</p>
-                            
-                            <input type="email" name="email" id="email" autocomplete="on" placeholder="email address" />
-                            <span id="email_error"></span>
-                             
-                            <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="phone number" />
-                            <span id="phone_error"></span>                            
-                  </fieldset>
-                     <button  type="submit" class="btn">All done. Start using RentKing!</button>
+            <div class="unit_form">
+                <form id="unit_form" name="unit_form" method="post" action="">
+                    <fieldset>
+                        <!-- <legend>Registration</legend> -->
+                        <h3>Adding A New Tenant</h3>
+                        <h4>Please enter details to create a new tenant:</h4>
+                    </fieldset>                  
+                    <fieldset>                   
+                        <p>Tenant Name:</p>                            
+                        <input type="text" name="firstname" id="firstname" autocomplete="on" placeholder="first name*" required="required"/>
+                        <span id="firstname_error"></span>  
 
+                        <input type="text" name="lastname" id="lastname" autocomplete="on" placeholder="last name*" required="required"/>
+                        <span id="lastname_error"></span>                                              
+                    </fieldset>
 
+                    <fieldset>
+                        <p>Contact Details:</p>
+                        <input type="email" name="email" id="email" autocomplete="on" placeholder="email"/>
+                        <span id="firstname_error"></span>  
 
+                        <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="phone number" />
+                        <span id="phone_error"></span>                             
+                    </fieldset>
+
+                    <fieldset>                   
+                        <p>Rent Details:</p>
+
+                        <input type="number" name="rent_amount" id="rent_amount" autocomplete="off" placeholder="$ Rent Amount"/>
+                        <span id="rent_amount_error"></span>
+
+                        <input type="number" name="bond" id="bond" autocomplete="off" placeholder="$ Bond/Security Deposit"/>
+                        <span id="bond_error"></span>
+
+                        <select name="recurring" class="recurring">
+                            <option value="0" selected="selected" disabled>~~~~ Recurring: ~~~~</option>
+                            <option value="1">Weekly</option>
+                            <option value="2">Fortnightly</option>
+                            <option value="3">Monthly</option>
+                        </select>        
+                    </fieldset>
+
+                    <fieldset>                   
+                        <p>Lease Term: (start-end)</p>
+
+                        <div id="start_date">
+                            <input type="date" name="start_date" id="start_date" />
+                        </div>
+                        <div id="end_date">
+                            <input type="date" name="end_date" id="end_date" />
+                        </div>                                 
+                    </fieldset>
+
+                    <fieldset>                   
+                        <p>Tenant Photo:</p>
+
+                        <div class="tenant_image" id="upload_tenant_image"><img src="" alt="unit image" width="150px" height="150px"></div>
+
+                        <input type="file" name="unit_image" id="unit_image" autocomplete="off" placeholder="unit image" />
+                        <span id="emergency_error"></span>         
+                    </fieldset>
+
+                    <button  type="submit" class="btn">Save Tenant!</button>
                 </form>
             </div>
             <!-- /register -->

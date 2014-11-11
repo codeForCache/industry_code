@@ -76,59 +76,57 @@
         </div>
         <div id="main">
             <div id="crumb">
-                <div class="heading"><i class="fa fa-pencil fa-fw fa-lg"></i> <span>Account Registration</span></div>
-                <!-- <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> Add A Unit</a></div> -->
+                <div class="heading"><i class="fa fa-cogs fa-fw fa-lg"></i> <span>Work Orders</span></div>
+                <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> <span>Create New</span></a></div>
             </div>
-            <!-- register -->
-            <div class="registration">
-                <form id="registration_form" name="registration_form" method="post" action="">
-                  <fieldset>
-                    <!-- <legend>Registration</legend> -->
-                        <h3>Manager Account Registration</h3>
-                        <h4>Please fill in your details:</h4>
-                        <p>RentKing site access:</p>
-                           
-                            <input type="text" name="username" id="username" autocomplete="off" placeholder="username" />
-                             <span id="username_error"><i class="fa fa-exclamation-circle fa-fw fa-lg"></i> Incorrect input</span>
-                           
-                            <input type="password" name="password" id="password" autocomplete="off" placeholder="password" />
-                            <span id="password_error"></span>
-                            
-                            <input type="password" name="confirm_password" id="confirm_password" autocomplete="off" placeholder="confirm password" />
-                            <span id="confirm_error"></span>                             
-                  </fieldset>
-                  <fieldset>                   
-                        <p>What is your name?</p>
-                            
-                            <input type="text" name="firstname" id="firstname" autocomplete="on" placeholder="first name" />
-                            <span id="firstname_error"></span>  
-                           
-                            <input type="text" name="lastname" id="lastname" autocomplete="on" placeholder="last name" />
-                            <span id="lastname_error"></span>                          
-                  </fieldset>
-                  <fieldset>                   
-                        <p>Company Info:</p>
-                            
-                            <input type="text" name="company_name" id="company_name" autocomplete="off" placeholder="company name/dba" />
-                            <span id="company_error"></span>        
-                  </fieldset>
-                  <fieldset>                   
-                        <p>Your contact info:</p>
-                            
-                            <input type="email" name="email" id="email" autocomplete="on" placeholder="email address" />
-                            <span id="email_error"></span>
-                             
-                            <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="phone number" />
-                            <span id="phone_error"></span>                            
-                  </fieldset>
-                     <button  type="submit" class="btn">All done. Start using RentKing!</button>
+            <!-- work orders -->
+            <div class="wo_panel">
+                <div class="unit_id pointer">
+                    <div class="id"><i class="fa fa-eye fa-fw fa-lg"></i> 21 lorem street; Unit ID: 779</div>
+                    <!-- <div class="tenant_count">2: Work Orders Found</div> -->
+                </div>
+                <div class="work_orders pointer">
+                    <div id="address"><p>21 lorem street; auckland</p></div>
+                    <div id="time"><p>Created: 10d 20h</p></div>
+                    <div id="priority"><p>Priority: Urgent</p></div>
+                    <hr>
+                    <div id="wo_message"><p>the fridge is broken please fix it! lorem</p></div>
+                    <div id="wo_reply">
+                        <div id="user_reply">
+                            <span>(replies): "their message"</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere praesentium minima vero perferendis, ad laboriosam perspiciatis cum error velit architecto amet, explicabo debitis dolorum accusamus ratione animi alias eligendi eos.</p>
+                        </div>
+                        <hr>
+                        <h4 id="tap_here">Tap Here to leave a message</h4>
+                        <form id="reply_form" name="reply_form" method="post" action="" class="hidden">
+                            <fieldset>
+                                <textarea maxlength="1000" rows="6" name="reply" id="reply" autocomplete="off" placeholder="Leave a reply..."/></textarea>
+                                <span id="reply_error"></span>
 
-
-
-                </form>
+                                <button  type="submit" class="btn">Send Reply</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <hr>
+                    <div id="submitted_by"><p>Submitted by <span>bob smith (tenant)</span> on <span>Oct 29 @ 9:15 pm</span></p></div>            
+                </div>
+                <div class="wo_control self_clear">                    
+                    <div class="list_left">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-pencil-square-o fa-fw fa-lg"></i>Edit WO</a></li>
+                            <li><a href="#"><i class="fa fa-times fa-fw fa-lg"></i>Delete WO</a></li>                           
+                        </ul>                        
+                    </div>
+                    <div class="list_right">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-arrows-v fa-fw fa-lg"></i>Change Priority</a></li>
+                            <li><a href="#reply"><i class="fa fa-reply  fa-fw fa-lg"></i>Reply to WO</a></li>                                  
+                        </ul>                        
+                    </div>
+                </div>               
+                               
             </div>
-            <!-- /register -->
-            
+            <!-- /work orders -->
             
         </div>
         <!-- footer -->

@@ -3,7 +3,11 @@ $(document).ready(function(){
 	// show hide top user panel
 	$("#control").click(function(){
 	  $("#control_panel").toggleClass("show");
-	});	
+	});
+	$("#control_panel>li:nth-child(4)>a").click(function(event){
+		event.preventDefault();
+	  $("#control_panel").toggleClass("show");
+	});		
 
 	// show hide main navigation links
 	$(".navigation>ul>li>a").click(function(){

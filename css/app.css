@@ -249,7 +249,7 @@
 	/*Unit CCS*/
 	.unit_panel, .wo_panel{
 		display: block;
-		overflow: auto;		
+		/*overflow: auto;	*/	
 		background-color: #fff;
 		margin: 0 .314em 0 .314em;		
 	}
@@ -274,7 +274,7 @@
 		float: right;
 	}
 
-	.unit_image{
+	.unit_image, .tenant_image{
 		display: block;
 		float: left;
 		width: 150px;
@@ -283,7 +283,7 @@
 		border: 1px dotted #505050;
 	}
 
-	#unit_image{
+	#unit_image, #tenant_image{
 		display: block;
 		clear: both;
 	}
@@ -451,7 +451,7 @@
 	/*/register*/
 
 	/*add unit*/
-	.unit_type{
+	.unit_type, .recurring{
 		display: block;
 		font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
 		width: 80%;
@@ -460,7 +460,7 @@
 		margin-bottom: .314em;
 	}
 
-	#upload_unit_image{
+	#upload_unit_image, #upload_tenant_image{
 		margin-bottom: .314em;
 	}
 	
@@ -611,13 +611,57 @@
 
 
 /*// Medium screens*/
-@media only screen and (min-width: 40em) { } 
+@media only screen and (min-width: 49em) {
+	/*navigation*/
+	.navigation{
+		display: block;
+		float: left;
+		width: 29%;
+		/*height: 100vh;*/		
+		border: 1px solid #505050;
+	}
+
+	#main{
+		display: block;
+		float: right;
+		width: 70%;
+		border: 1px solid #505050;
+	}
+
+	.footer{
+		padding: 0;
+		display: block;
+		float: right;
+		width: 70%;
+		border: 1px solid #505050;
+	}
+
+	.footer_left{
+		padding-left: .314em;
+		padding-right: .314em;
+	}
+
+	.footer_left a{
+		padding-left: 0 !IMPORTANT;
+		
+	}
+	
+	.footer_right>ul li{
+		display: inline-block;
+	}
+
+	/*/navigation*/
+
+ } 
 /* min-width 641px, medium screens */
 
 
 
 /*// Large screens*/
-@media only screen and (min-width: 60em) { } 
+@media only screen and (min-width: 70em) {
+	
+
+ } 
 /* min-width 1025px, large screens */
 
 
