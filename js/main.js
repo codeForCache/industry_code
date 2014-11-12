@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+	$("body, html").on("click",function(e){
+		if($("#control").find(e.target).length == 0){
+			$("#control_panel").removeClass("show");
+		}	
+	});
+
 	// show hide top user panel
 	$("#control").click(function(){
 	  $("#control_panel").toggleClass("show");
