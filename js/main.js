@@ -4,15 +4,29 @@ $(document).ready(function(){
 	$("#control").click(function(){
 	  $("#control_panel").toggleClass("show");
 	});
-	$("#control_panel>li:nth-child(4)>a").click(function(event){
-		event.preventDefault();
+	$("#control_panel>li:nth-child(4)>a").click(function(e){
+		e.preventDefault();
 	  $("#control_panel").toggleClass("show");
 	});		
 
 	// show hide main navigation links
-	$(".navigation>ul>li>a").click(function(){
-	 	$(this).next().toggleClass("show");
+
+	$("body, html").on("click",function(e){
+		if($(".navigation").find(e.target).length == 0){
+			$(".navigation>ul ul").removeClass("show");
+		}	
 	});
+
+
+	$(".navigation>ul>li>a").click(function(){
+	 	if ($(".navigation>ul ul").hasClass("show")) {
+	 		$(".navigation>ul ul").removeClass("show");
+	 		// $(this).next().toggleClass("show");
+	 	} 	
+	 	$(this).next().toggleClass("show");		 	 		 	
+	});
+	
+	
 
 	// show hide panels concerning unit id 
 	$(".unit_id").click(function(){
