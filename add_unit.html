@@ -76,73 +76,103 @@
         </div>
         <div id="main">
             <div id="crumb">
-                <div class="heading"><i class="fa fa-plus-square fa-fw fa-lg"></i> <span>Add Tenant(s)</span></div>
-                <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> Add Tenant(s)</a></div>
+                <div class="heading"><i class="fa fa-plus-square fa-fw fa-lg"></i> <span>Add A Unit</span></div>
+                <div class="action"><a href="#"><i class="fa fa-plus-square fa-fw fa-lg"></i> Add A Unit</a></div>
             </div>
             <!-- register -->
             <div class="unit_form">
                 <form id="unit_form" name="unit_form" method="post" action="">
                     <fieldset>
                         <!-- <legend>Registration</legend> -->
-                        <h3>Adding A New Tenant</h3>
-                        <h4>Please enter details to create a new tenant:</h4>
+                        <h3>Adding A New Unit</h3>
+                        <h4>Please enter details to create a new unit:</h4>
                     </fieldset>                  
                     <fieldset>                   
-                        <p>Tenant Name:</p>                            
-                        <input type="text" name="firstname" id="firstname" autocomplete="on" placeholder="first name*" required="required"/>
-                        <span id="firstname_error"></span>  
+                        <p>Unit Address:</p>                            
+                        <input type="text" name="street" id="street" autocomplete="on" placeholder="street*" required="required"/>
+                        <span id="street_error"></span>  
 
-                        <input type="text" name="lastname" id="lastname" autocomplete="on" placeholder="last name*" required="required"/>
-                        <span id="lastname_error"></span>                                              
+                        <input type="text" name="apt" id="apt" autocomplete="on" placeholder="Apt./Suite./Etc." />
+                        <span id="apt_error"></span> 
+
+                        <input type="text" name="city" id="city" autocomplete="on" placeholder="city*" required="required"/>
+                        <span id="city_error"></span>
+
+                        <input type="text" name="postal" id="postal" autocomplete="on" placeholder="postal code*" required="required"/>
+                        <span id="postal_error"></span>
+
+                        <input type="text" name="extra" id="extra" autocomplete="off" placeholder="extra info" />
+                        <span id="extra_error"></span>                         
                     </fieldset>
-
                     <fieldset>
-                        <p>Contact Details:</p>
-                        <input type="email" name="email" id="email" autocomplete="on" placeholder="email address"/>
-                        <span id="firstname_error"></span>  
+                        <p>Unit Details:</p>
+                        <select name="unit_type" class="unit_type">
+                            <option value="" selected="SELECTED" required="required">~~~~ Select Type* ~~~~</option>
+                            <optgroup label="Single-family">
+                                <!-- <option value="5">Condo</option> -->
+                                <option value="11">Farm</option>
+                                <option value="14">House</option>
+                                <option value="13">Houseboat</option>
+                                <option value="12">Lot</option>
+                                <option value="10">Mobile</option>
+                                <option value="1">Single-family</option>
+                                <option value="6">Townhouse</option>
+                            </optgroup>
+                            <optgroup label="Multi-family">
+                                <option value="4">Apartment</option>
+                                <!-- <option value="7">Loft</option> -->
+                                <option value="2">Multi-family</option>
+                                <option value="8">Studio</option>
+                                <!-- <option value="9">TIC</option> -->
+                            </optgroup>
+                            <optgroup label="Commercial">
+                                <option value="3">Commercial</option>
+                                <option value="18">Industrial</option>
+                                <option value="16">Office</option>
+                                <option value="15">Retail</option>
+                                <option value="17">Warehouse</option>
+                            </optgroup>
+                        </select>
 
-                        <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="phone number" />
-                        <span id="phone_error"></span>                             
+                        <input type="tel" name="bed" id="bed" autocomplete="off" placeholder="bedrooms" />
+                        <span id="bed_error"></span>
+
+                        <input type="tel" name="bath" id="bath" autocomplete="off" placeholder="bathrooms" />
+                        <span id="bed_error"></span>
+
+                        <input type="tel" name="square" id="square" autocomplete="off" placeholder="square meterage m²" />
+                        <span id="square_error"></span>
+
+                        <input type="tel" name="emergency" id="emergency" autocomplete="off" placeholder="emergency contact #" />
+                        <span id="emergency_error"></span>                             
+                    </fieldset>
+                    <fieldset>                   
+                        <p>Property Management:</p>
+
+                        <input type="text" name="owner" id="owner" autocomplete="off" placeholder="unit owner*" required="required"/>
+                        <span id="owner_error"></span>
+
+                        <input type="tel" name="desired_monthly" id="desired_monthly" autocomplete="off" placeholder="desired monthly rent $__" />
+                        <span id="desired_monthly_error"></span>         
                     </fieldset>
 
                     <fieldset>                   
-                        <p>Rent Details:</p>
+                        <p>Bank Accounts:</p>
 
-                        <input type="number" name="rent_amount" id="rent_amount" autocomplete="off" placeholder="$ Rent Amount"/>
-                        <span id="rent_amount_error"></span>
-
-                        <input type="number" name="bond" id="bond" autocomplete="off" placeholder="$ Bond/Security Deposit"/>
-                        <span id="bond_error"></span>
-
-                        <select name="recurring" class="recurring">
-                            <option value="0" selected="selected" disabled>~~~~ Recurring: ~~~~</option>
-                            <option value="1">Weekly</option>
-                            <option value="2">Fortnightly</option>
-                            <option value="3">Monthly</option>
-                        </select>        
+                        <input type="text" name="bank" id="bank" autocomplete="off" placeholder="operating bank account" />
+                        <span id="bank_error"></span>        
                     </fieldset>
 
                     <fieldset>                   
-                        <p>Lease Term: (start-end)</p>
+                        <p>Unit Photo:</p>
 
-                        <div id="start_date">
-                            <input type="date" name="start_date" id="start_date" />
-                        </div>
-                        <div id="end_date">
-                            <input type="date" name="end_date" id="end_date" />
-                        </div>                                 
+                        <div class="unit_image" id="upload_unit_image"><img src="" alt="unit image" width="150px" height="150px"></div>
+
+                        <input type="file" name="unit_image" id="unit_image" autocomplete="off" placeholder="unit image" />
+                        <span id="emergency_error"></span>         
                     </fieldset>
 
-                    <fieldset>                   
-                        <p>Tenant Photo:</p>
-
-                        <div class="tenant_image" id="upload_tenant_image"><img src="" alt="tenant image" width="150px" height="150px"></div>
-
-                        <input type="file" name="tenant_image" id="tenant_image" autocomplete="off" placeholder="tenant image" />
-                        <span id="upload_error"></span>         
-                    </fieldset>
-
-                    <button  type="submit" class="btn">Save Tenant!</button>
+                    <button  type="submit" class="btn">Add This Unit Now!</button>
                 </form>
             </div>
             <!-- /register -->

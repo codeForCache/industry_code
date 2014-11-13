@@ -493,12 +493,12 @@ html,body{
 		padding-left: 2em;
 	}
 
-	#wo_reply textarea, #newwo_form textarea{
+	#wo_replies textarea, #newwo_form textarea{
 		width: 100%;
 		margin-bottom: .628em;
 	}
 
-	#wo_reply button{
+	#wo_replies button{
 		display: block;
 		clear: both !IMPORTANT;
 	}

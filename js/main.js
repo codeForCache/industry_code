@@ -20,16 +20,24 @@ $(document).ready(function(){
 	$("body, html").on("click",function(e){
 		if($(".navigation").find(e.target).length == 0){
 			$(".navigation>ul ul").removeClass("show");
+			console.log("bla");
 		}	
 	});
 
 
-	$(".navigation>ul>li>a").click(function(){
-	 	if ($(".navigation>ul ul").hasClass("show")) {
-	 		$(".navigation>ul ul").removeClass("show");
-	 		// $(this).next().toggleClass("show");
+	$(".navigation>ul>li>a").click(function(e){
+
+	 	if ($(".navigation>ul ul").not($(this).next()).hasClass("show")) {
+
+	 		$(".navigation>ul ul").not($(this).next()).removeClass("show");
+	 	
 	 	} 	
-	 	$(this).next().toggleClass("show");		 	 		 	
+
+	 	if($(this).next().length != 0){	 		
+	 		e.preventDefault();
+	 		$(this).next().toggleClass("show");	
+	 	}
+	 		 	 		 	
 	});
 	
 	
