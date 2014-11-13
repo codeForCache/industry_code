@@ -490,7 +490,8 @@ html,body{
 	}
 
 	#user_reply{
-		padding-left: 2em;
+		width: 72%;
+		padding-left: 4em;
 	}
 
 	#wo_replies textarea, #newwo_form textarea{
